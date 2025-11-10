@@ -57,6 +57,6 @@ jobs:
             docker run -d -p 8080:8080 \
             -e spring_profile_active=prod \
             -e MYSQL_PASSWORD=${{ secrets.MYSQL_PASSWORD }} \
-            -e MYSQL_HOST=mysql \  
+            -e MYSQL_HOST=mysql \
             --network=rede --name simulado \
             pedrovargass/simulado-ci:${{ github.sha }} 
